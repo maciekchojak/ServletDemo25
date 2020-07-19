@@ -7,10 +7,21 @@
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.sda.HelloServlet</servlet-class>
+       <!-- <load-on-startup>2</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProgrammingLanguageDashboardServlet</servlet-name>
+        <servlet-class>com.sda.ProgrammingLanguageDashboardServlet</servlet-class>
+       <!-- <load-on-startup>1</load-on-startup>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProgrammingLanguageDashboardServlet</servlet-name>
+        <url-pattern>/languages</url-pattern>
     </servlet-mapping>
 
 </web-app>
