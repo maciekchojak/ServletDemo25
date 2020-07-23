@@ -1,4 +1,4 @@
-package com.sda;
+package com.sda.programminglanguage;
 
 import org.apache.log4j.Logger;
 
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class ProgrammingLanguageDashboardServlet extends HttpServlet {
 
@@ -39,22 +40,18 @@ public class ProgrammingLanguageDashboardServlet extends HttpServlet {
         writer.println("<th>Level</th>");
         writer.println("</tr>");
 
-        writer.println("<tr>");
-        writer.println("<td>Java</td>");
-        writer.println("<td>WEB, Desktop, Mobile</td>");
-        writer.println("<td>3/5</td>");
-        writer.println("</tr>");
+        List<ProgrammingLanguage> programmingLanguages = ProgrammingLanguageDataHolder.getInstance().getProgrammingLanguages();
 
-
-        writer.println("<tr>");
-        writer.println("<td>PHP</td>");
-        writer.println("<td>WEB</td>");
-        writer.println("<td>2/5</td>");
-        writer.println("</tr>");
+        programmingLanguages.forEach(elem -> {
+            writer.println("<tr>");
+            writer.println("<td>"+elem.getName()+"</td>");
+            writer.println("<td>"+elem.getUsing()+"</td>");
+            writer.println("<td>"+elem.getLevel()+"</td>");
+            writer.println("</tr>");
+        });
 
         writer.println("<table>");
         writer.println("</table>");
-
 
     }
 }

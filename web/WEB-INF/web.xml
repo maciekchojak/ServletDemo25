@@ -16,12 +16,22 @@
 
     <servlet>
         <servlet-name>ProgrammingLanguageDashboardServlet</servlet-name>
-        <servlet-class>com.sda.ProgrammingLanguageDashboardServlet</servlet-class>
+        <servlet-class>com.sda.programminglanguage.ProgrammingLanguageDashboardServlet</servlet-class>
        <!-- <load-on-startup>1</load-on-startup>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>ProgrammingLanguageDashboardServlet</servlet-name>
         <url-pattern>/languages</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>AddProgrammingLanguagesServlet</servlet-name>
+        <servlet-class>com.sda.programminglanguage.AddProgrammingLanguageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProgrammingLanguagesServlet</servlet-name>
+        <url-pattern>/addLanguage</url-pattern>
     </servlet-mapping>
 
 </web-app>
